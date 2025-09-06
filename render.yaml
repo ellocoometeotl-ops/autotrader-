@@ -1,0 +1,23 @@
+# Exported from Render on 2025-09-06T07:39:46Z
+services:
+- type: web
+  name: autotrader-
+  runtime: docker
+  repo: https://github.com/ellocoometeotl-ops/autotrader-
+  plan: free
+  envVars:
+  - key: NODE_ENV
+    sync: false
+  - key: BINANCE_SECRET_KEY
+    sync: false
+  - key: BINANCE_API_KEY
+    sync: false
+  - key: ALPACA_SECRET_KEY
+    sync: false
+  - key: ALPACA_API_KEY
+    sync: false
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
+version: "1"
